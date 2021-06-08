@@ -1,0 +1,54 @@
+.numpad {
+    height: 35rem;
+    width: 340px;
+    position: relative;
+    background-color: black;
+    clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10%);
+    border-radius: 4px;
+}
+
+.numpad::before {
+    content: "";
+    background-color: rgb(240, 240, 240);
+    clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10%);
+    border-radius: 3px;
+    height: 99%;
+    width: 99.4%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+}
+
+.numpad_row {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    height: 50px;
+    width: 80%;
+    margin-top: 30px;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.numpad_row_key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 26%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    border: 1px solid rgba(207, 207, 207, 0.5);
+    box-shadow: 3px -3px 10px rgba(255, 255, 255, 1), -3px 3px 10px rgba(207, 207, 207, 1);
+    transition: 0.1s ease;
+    text-align: center;
+    font-size: 2rem;
+}
+.numpad_row_key:active {
+    transform: scale(1.05);
+    box-shadow: inset 3px 3px 8px rgba(237, 237, 237, 0.8), inset -3px -3px 8px rgba(237, 237, 237, 0.8);
+    filter: brightness(90%);
+}

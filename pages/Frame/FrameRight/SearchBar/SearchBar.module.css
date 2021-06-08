@@ -1,0 +1,90 @@
+.search {
+    width: 40rem;
+    height: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 5rem;
+    left: 64rem;
+    z-index: 999;
+}
+
+.search_form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.search_form_input {
+    width: 60%;
+    height: 4rem;
+    border: 0;
+    background-color: #7c1f1e;
+    border-radius: 100px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    font-size: 1.9rem;
+    -webkit-box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.5);
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+    -webkit-animation: glow-white 2s ease;
+    animation: glow-white 2s ease;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    outline: 0 !important;
+}
+
+.search_form_input:focus {
+    width: 80%;
+    animation-play-state: paused;
+    background-color: #8c1f1e;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+    outline: 0;
+}
+
+.search_form_submit {
+    position: relative;
+    top: 2rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 1px solid rgb(194, 37, 35);
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: 3px -3px 15px rgba(255, 71, 68, 0.664), -3px 3px 15px rgb(59, 1, 0);
+    transform: scale(1.05);
+    transition: 1s ease;
+}
+.search_form_submit:active {
+    transform: scale(1.05);
+    box-shadow: inset 10px 10px 20px rgba(237, 237, 237, 0.8), inset -10px -10px 8px rgba(237, 237, 237, 0.8);
+}
+.search_form_submit:focus {
+    outline: 0;
+}
+
+@keyframes glow-white {
+    0% {
+        border: 0.2rem solid rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        border: 0.2rem solid white;
+    }
+    100% {
+        border: 0.2rem solid rgba(255, 255, 255, 0.4);
+    }
+}

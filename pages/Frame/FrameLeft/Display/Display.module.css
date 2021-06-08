@@ -1,0 +1,113 @@
+.display {
+    background-color: #242424;
+    width: 40rem;
+    height: 35rem;
+    box-shadow: 0 0 2rem #330100;
+    border: 0.1rem solid #000000;
+    position: relative;
+    /* top: -2.5rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.display::before {
+    content: "";
+    background-color: white;
+    clip-path: polygon(0% 0%, 95% 0%, 100% 7%, 100% 100%, 0% 100%);
+    width: 45rem;
+    height: 40rem;
+    border-radius: 3px;
+    position: absolute;
+    z-index: -10;
+}
+.display::after {
+    content: "";
+    background-color: black;
+    clip-path: polygon(0% 0%, 95% 0%, 100% 7%, 100% 100%, 0% 100%);
+    width: 45rem;
+    height: 40rem;
+    border-radius: 3px;
+    position: absolute;
+    z-index: -11;
+    transform: scale(1.006);
+}
+
+.display_pokemon_name {
+    width: 60%;
+    height: 5rem;
+    text-transform: capitalize;
+    font-family: 'VT323', monospace;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.display_pokemon_type {
+    height: 4rem;
+    width: 100%;
+    position: absolute;
+    top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'VT323', monospace;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.display_pokemon_type > * {
+    height: 100%;
+    width: 12.5rem;
+    background-color: white;
+    border-radius: 100px;
+    border: 0.1rem solid #000000;
+    position: relative;
+    z-index: 200;
+    font-size: 2.4rem;
+    line-height: 3.8rem;
+    text-transform: uppercase;
+    visibility: hidden;
+}
+.display_pokemon_type > *::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 92%;
+    width: 11.9rem;
+    border-radius: 100px;
+    border: 0.1rem solid #000000;
+    z-index: -1;
+    font-family: 'VT323', monospace;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.display_pokemon_type1 {
+    left: 2rem;
+    font-family: 'VT323', monospace;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.display_pokemon_type2 {
+    right: 2rem;
+    font-family: 'VT323', monospace;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.display_pokemon_image {
+    width: 28rem;
+    height: 28rem;
+    background-size: cover;
+    font-size: 4rem;
+    line-height: 5rem;
+}
